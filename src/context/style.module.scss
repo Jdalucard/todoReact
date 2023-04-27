@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root {
+  /* light theme */
+  --verylight: hsl(0, 0%, 98%);
+  --VeryLight-Grayish--Blue: hsl(236, 33%, 92%);
+  --Light-Grayish-Blue: hsl(233, 11%, 84%);
+  --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+  --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+  /* dark theme  */
+  --verydark: hsl(235, 21%, 11%);
+  --Very-Dark-DesaturatedBlue: hsl(235, 24%, 19%);
+  --Light-Gray-shBlue: hsl(234, 39%, 85%);
+  --Light-Gray-hover: hsl(236, 33%, 92%);
+  --Dark-Gray-shBlue: hsl(234, 11%, 52%);
+  --Very-ark-rayishBlue: hsl(233, 14%, 35%);
+  --Very-Dark-GrayishBlue: hsl(237, 14%, 26%);
+  /*   font family */
+  --ff-accent: 'Josefin Sans', sans-serif;
+  --regular: 400;
+  --Bold: 700;
+  --todo-Check-Background: hsl(192, 100%, 67%), hsl(280, 87%, 65%);
+}
+
+/*  Theme  dark */
+
+.dark {
+  font-size: 1rem;
+  font-family: var(--ff-accent);
+  color: var(--Light-Gray-shBlue);
+  background-color: var(--verydark);
+
+  .styleform {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .todoImageIconHeader {
+    display: flex;
+    background: var(--Very-Dark-DesaturatedBlue);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+  }
+  input {
+    min-width: 40vw;
+    max-height: 2rem;
+    border-radius: 0.3rem;
+    background: var(--Very-Dark-DesaturatedBlue);
+    color: var(--Light-Gray-shBlue);
+    outline: none;
+    border: none;
+  }
+
+  .divtask {
+    display: flex;
+    flex-direction: column;
+    background: var(--Very-Dark-DesaturatedBlue);
+    border-radius: 0.3rem 0.3rem 0rem 0rem;
+  }
+  .fotterbutton {
+    display: flex;
+    background: var(--Very-Dark-DesaturatedBlue);
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.3rem;
+    width: 100%;
+    padding: 1rem;
+    button {
+      background: none;
+      list-style: none;
+      border: none;
+      cursor: pointer;
+      color: var(--Light-Gray-shBlue);
+      &:hover {
+        color: var(--Light-Gray-hover);
+      }
+    }
+  }
+}
+/*  Theme  light */
+
+.light {
+  font-size: 1rem;
+  font-family: var(--ff-accent);
+  background: var(--Light-Grayish-Blue);
+
+  .styleform {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .todoImageIconHeader {
+    display: flex;
+    background: var(--verylight);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+  }
+  input {
+    min-width: 40vw;
+    max-height: 2rem;
+    border-radius: 0.3rem;
+    background: var(--verylight);
+    color: var(--Very-Dark-Grayish-Blue);
+    outline: none;
+    border: none;
+  }
+
+  .divtask {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: var(--verylight);
+    border-radius: 0.3rem 0.3rem 0rem 0rem;
+  }
+  .fotterbutton {
+    display: flex;
+    background: var(--verylight);
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.2rem;
+    width: 100%;
+    padding: 1rem;
+    .todoCompleted {
+      color: var(--Dark-Gray-shBlue);
+    }
+    button {
+      background: none;
+      list-style: none;
+      border: none;
+      cursor: pointer;
+      color: var(--Very-Dark-Grayish-Blue);
+      &:hover {
+        color: var(--Dark-Grayish-Blue);
+      }
+    }
+  }
+}
+
+/* card body General */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.Backgroud {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+
+.image_container {
+  cursor: pointer;
+}
+.title {
+  position: absolute;
+  width: 100%;
+  margin-top: -5rem;
+  .todo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--verylight);
+    letter-spacing: 1.2rem;
+    font-family: var(--ff-accent);
+    font-weight: var(--Bold);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+}
+
+.container_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50%;
+  margin-top: -7rem;
+}
+.todoImageIconHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  .iconimageInput {
+    border: solid 1px var(--Dark-Gray-shBlue);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.3rem;
+    cursor: pointer;
+  }
+  .iconimageInput:hover {
+    color: hsl(280, 87%, 65%);
+  }
+}
+
+.Container_OnList {
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 1px var(--Dark-Grayish-Blue);
+  padding: 0.8rem;
+  justify-content: space-between;
+  cursor: pointer;
+  .ultaks {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.3rem;
+    cursor: pointer;
+  }
+  .ullist {
+    list-style: none;
+    margin-left: -2rem;
+  }
+
+  /* render condicional */
+  .imagecheck {
+    cursor: pointer;
+    border-radius: 100%;
+    width: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  }
+  .imagecheckactivate {
+    border: solid 1px var(--Dark-Gray-shBlue);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.3rem;
+    cursor: pointer;
+  }
+  .activetask {
+    text-decoration: none;
+  }
+  .completedtask {
+    text-decoration: line-through;
+  }
+}
+
+/* responsive
+ */
+
+@media (max-width: 768px) {
+  .title {
+    margin: 1.5rem;
+    padding: 1rem;
+
+    .todo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .todoImageIconHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    label {
+      width: 100%;
+    }
+  }
+
+  .container_card {
+    max-width: 90%;
+    margin-top: -1rem;
+  }
+  .fotterbutton {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
